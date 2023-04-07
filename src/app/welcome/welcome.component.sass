@@ -1,6 +1,7 @@
 :host
 	display: flex
-	height: 100vh
+	position: relative
+	height: calc(100vh - 250px)
 	padding-top: 110px
 	flex-direction: column
 	align-items: center
@@ -33,3 +34,39 @@ div
 .line
 	border-bottom: 3px solid black
 	margin-bottom: 30px
+
+.mail
+	position: absolute
+	left: 0
+	bottom: 0
+	transform: rotate(-90deg) translateX(180px) translateY(-60px)
+
+.scroll
+	position: absolute
+	right: 0
+	bottom: 120px
+	display: flex
+	flex-direction: column
+	width: 85px
+	justify-content: flex-end
+	align-items: center
+	gap: 0
+	span
+		margin: 0
+		text-align: center
+
+	img
+		transform: translateY(-50px)
+		animation: scrollDown 2s infinite
+
+
+	@keyframes scrollDown
+
+		0%
+			transform: translateY(-50px)
+
+		50%
+			transform: translateY(0px)
+
+		100%
+			transform: translateY(-50px)
