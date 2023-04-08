@@ -34,9 +34,15 @@ app-button
 img
 	max-width: 100%
 	max-height: 60vh
+	filter: grayscale(1)
+
+
 
 .image-container
 	position: relative
+	&:hover
+		img
+			filter: none
 
 .image-container:after
 	border: 5px solid transparent

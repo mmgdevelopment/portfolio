@@ -16,12 +16,27 @@
 	border: 2px solid black
 
 
-img
+.desktop
 	max-width: 80%
 	padding: 45px
+	@media ( max-width: 1050px )
+		display: none
+
+
+
+.mobile
+	max-width: 80%
+	padding: 45px
+	@media ( min-width: 1050px  )
+		display: none
+	@media ( max-width: 1050px  )
+		display: inline
+
 h2
 	margin: 0
 	padding: 0 25px
 	position: absolute
 	top: -40px
 	background-color: white
+	@media ( max-width: 580px )
+		top: -20px
