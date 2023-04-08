@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FooterComponent,
     MainComponent,
     ImprintComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
