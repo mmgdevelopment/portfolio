@@ -1,7 +1,8 @@
+@import './sass/_presets'
+
 @font-face
 	font-family: syne
 	src: url(./assets/fonts/Syne/Syne-VariableFont_wght.ttf)
-
 @font-face
 	font-family: overpass
 	src: url(./assets/fonts/Overpass/Overpass-VariableFont_wght.ttf)
@@ -15,3 +16,18 @@ body
 	display: flex
 	flex-direction: column
 	align-items: center
+
+h2
+	font-size: 78px
+	font-weight: 800
+	margin: 45px 0
+	@media (max-width: 1250px)
+		font-size: 64px
+	@media (max-width: 725px)
+		font-size: 52px
+	@media (max-width: 580px)
+		font-size: 38px
+	@media (max-width: 420px)
+		font-size: 32px
+	&:hover
+		color: $primeColor

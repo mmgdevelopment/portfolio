@@ -12,6 +12,7 @@ import { MainComponent } from './main/main.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ButtonComponent } from './button/button.component';
+import { SkillIconComponent } from './skill-icon/skill-icon.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ButtonComponent } from './button/button.component';
     MainComponent,
     ImprintComponent,
     WelcomeComponent,
-    ButtonComponent
+    ButtonComponent,
+    SkillIconComponent
   ],
   imports: [
     BrowserModule,
