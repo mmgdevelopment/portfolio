@@ -1,0 +1,16 @@
+<span [ngClass]="{ mirror: i % 2 !== 0 }" class="paginator">
+  0{{ i + 1 }}/0{{ n }}
+</span>
+
+<div class="image-container">
+  <img src="{{ img }}" alt="" />
+</div>
+<div
+  [ngClass]="{ fromLeft: i % 2 === 0, fromRight: i % 2 != 0 }"
+  class="text-container"
+>
+  <h3>{{ title }}</h3>
+  <span class="tech-text">{{ tech }}</span>
+  <p>{{ description }}</p>
+  <app-button>Github</app-button>
+</div>

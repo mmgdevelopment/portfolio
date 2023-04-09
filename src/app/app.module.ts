@@ -13,6 +13,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ButtonComponent } from './button/button.component';
 import { SkillIconComponent } from './skill-icon/skill-icon.component';
+import { SinglePortfolioComponent } from './single-portfolio/single-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SkillIconComponent } from './skill-icon/skill-icon.component';
     ImprintComponent,
     WelcomeComponent,
     ButtonComponent,
-    SkillIconComponent
+    SkillIconComponent,
+    SinglePortfolioComponent
   ],
   imports: [
     BrowserModule,

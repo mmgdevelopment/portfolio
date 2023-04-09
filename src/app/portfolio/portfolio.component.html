@@ -1,1 +1,19 @@
-<p>portfolio works!</p>
+<img class="desktop" src="./../../assets/img/arrow-right.svg" alt="" />
+<img class="mobile" src="./../../assets/img/arrow-right-mobile.svg" alt="" />
+
+<div>
+  <h2>Portfolio</h2>
+  <span>This is a sample of my work - please feel free to try them out</span>
+</div>
+
+<app-single-portfolio
+  *ngFor="let project of projects; let i = index"
+  [title]="project.title"
+  [tech]="project.tech"
+  [description]="project.description"
+  [pageLink]="project.pageLink"
+  [github]="project.github"
+  [img]="project.img"
+  [i]="i"
+  [n]="projects.length"
+></app-single-portfolio>

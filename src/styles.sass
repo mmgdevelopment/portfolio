@@ -32,3 +32,19 @@ h2
 		font-size: 32px
 	&:hover
 		color: $primeColor
+
+.desktop
+	max-width: 80%
+	padding: 45px
+	@media ( max-width: 1050px )
+		display: none
+
+
+
+.mobile
+	max-width: 80%
+	padding: 45px
+	@media ( min-width: 1050px  )
+		display: none
+	@media ( max-width: 1050px  )
+		display: inline

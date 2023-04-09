@@ -1,0 +1,115 @@
+@import ./../../sass/_presets
+:host
+	position: relative
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin: 85px 0
+	&:hover
+		img
+			filter: none
+
+:host.reverse
+		flex-direction: row-reverse
+
+
+.paginator
+	position: absolute
+	right: 0px
+	top: 0px
+	font-family: overpass, sans-serif
+	font-size: 48px
+	font-weight: 600
+.mirror
+	right: auto
+	left: 0
+
+img
+	max-width: 100%
+	filter: grayscale(1)
+
+.image-container
+	max-width: 60%
+	position: relative
+	z-index: 1
+
+
+:host:hover > .fromLeft
+	opacity: 1
+	animation: slide-in-right linear 256ms
+
+:host:hover > .fromRight
+	opacity: 1
+	animation: slide-in-left linear 256ms
+
+
+.image-container:after
+	content: ''
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	display: block
+	border: 5px solid transparent
+	transition: all ease-in-out 125ms
+
+:host:hover > .image-container::after
+	top: 15px
+	bottom: -15px
+	right: -15px
+	left: 15px
+	border: 5px solid black
+
+.text-container
+	flex-direction: column
+	justify-content: center
+	margin: 45px 0
+	max-width: 35%
+	display: flex
+	opacity: 0
+
+.fromLeft
+	animation: slide-out-right linear 256ms
+.fromRight
+	animation: slide-out-left linear 256ms
+
+.tech-text
+	color: $primeColor
+	font-size: 22px
+h3
+	font-size: 36px
+	font-family: syne, sans-serif
+	font-weight: 800
+	margin: 0
+
+
+@keyframes slide-in-right
+	0%
+		transform: translateX(-35vw)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes slide-out-right
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(-35vw)
+		opacity: 0
+
+@keyframes slide-in-left
+	0%
+		transform: translateX(35vw)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes slide-out-left
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(35vw)
+		opacity: 0
