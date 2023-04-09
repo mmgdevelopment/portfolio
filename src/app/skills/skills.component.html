@@ -1,12 +1,14 @@
-<img class="desktop" src="./../../assets/img/arrow-left.svg" alt="" />
-<img class="mobile" src="./../../assets/img/arrow-left-mobile.svg" alt="" />
+<app-container>
+  <img class="desktop" src="./../../assets/img/arrow-left.svg" alt="" />
+  <img class="mobile" src="./../../assets/img/arrow-left-mobile.svg" alt="" />
 
-<div class="content-container">
-  <h2>My skills</h2>
+  <div class="content-container">
+    <h2>My skills</h2>
 
-  <app-skill-icon
-    *ngFor="let icon of icons"
-    [title]="icon.title"
-    [img]="icon.img"
-  ></app-skill-icon>
-</div>
+    <app-skill-icon
+      *ngFor="let icon of icons"
+      [title]="icon.title"
+      [img]="icon.img"
+    ></app-skill-icon>
+  </div>
+</app-container>

@@ -14,6 +14,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ButtonComponent } from './button/button.component';
 import { SkillIconComponent } from './skill-icon/skill-icon.component';
 import { SinglePortfolioComponent } from './single-portfolio/single-portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SinglePortfolioComponent } from './single-portfolio/single-portfolio.co
     WelcomeComponent,
     ButtonComponent,
     SkillIconComponent,
-    SinglePortfolioComponent
+    SinglePortfolioComponent,
+    ContactComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
