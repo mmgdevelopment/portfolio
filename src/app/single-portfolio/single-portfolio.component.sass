@@ -5,12 +5,18 @@
 	justify-content: space-between
 	width: 100%
 	margin: 85px 0
+	@media  ( max-width: 1450px )
+		flex-direction: column
+		align-items: center
+
 	&:hover
 		img
 			filter: none
 
 :host.reverse
 		flex-direction: row-reverse
+		@media  ( max-width: 1450px )
+			flex-direction: column
 
 
 .paginator
@@ -20,6 +26,8 @@
 	font-family: overpass, sans-serif
 	font-size: 48px
 	font-weight: 600
+	@media  ( max-width: 1450px )
+		font-size: 32px
 .mirror
 	right: auto
 	left: 0
@@ -32,6 +40,10 @@ img
 	max-width: 60%
 	position: relative
 	z-index: 1
+	@media  ( max-width: 1450px )
+		width: fit-content
+		max-width: 100%
+		margin-top: 65px
 
 
 :host:hover > .fromLeft
@@ -68,6 +80,8 @@ img
 	max-width: 35%
 	display: flex
 	opacity: 0
+	@media  ( max-width: 1450px )
+		max-width: 600px
 
 .fromLeft
 	animation: slide-out-right linear 256ms
