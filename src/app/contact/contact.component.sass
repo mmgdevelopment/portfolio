@@ -2,7 +2,37 @@
 	display: flex
 	align-items: center
 	justify-content: center
-p
-	width: 320px
+	width: 50%
 	height: 500px
-	background-color: white
+	background-color: black
+
+	form
+		display: flex
+		align-items: center
+		flex-direction: column
+		width: 100%
+	input
+		height: 50px
+
+	textarea
+		resize: vertical
+
+	textarea, input
+		color: white
+		font-size: 18px
+		margin: 25px 0
+		width: 99%
+		background-color: black
+		border: 3px solid transparent
+		border-bottom: 3px solid white
+		transition: all ease-in-out 125ms
+		&:hover
+			border: 3px solid white
+		&:focus
+			outline: 1px solid white
+			border: 3px solid transparent
+		&::placeholder
+			color: white
+
+	app-button
+		margin: 45px
