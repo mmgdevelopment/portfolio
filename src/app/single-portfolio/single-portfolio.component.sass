@@ -8,29 +8,55 @@
 	@media  ( max-width: 1450px )
 		flex-direction: column
 		align-items: center
-
+		margin: 25px 0
 	&:hover
 		img
 			filter: none
 
-:host.reverse
-		flex-direction: row-reverse
-		@media  ( max-width: 1450px )
+:host.odd
+	flex-direction: row
+	@media  ( max-width: 1450px )
 			flex-direction: column
+	.paginator
+		right: 0px
+	.text-container
+		animation: slide-out-right linear 256ms
+	&:hover > .text-container
+		opacity: 1
+		animation: slide-in-right linear 256ms
+	&:hover > .image-container::after
+		top: 15px
+		bottom: -15px
+		right: -15px
+		left: 15px
+		border: 5px solid black
 
+:host.straight
+	flex-direction: row-reverse
+	@media  ( max-width: 1450px )
+			flex-direction: column
+	.paginator
+		left: 0px
+	.text-container
+		animation: slide-out-left linear 256ms
+	&:hover > .text-container
+		opacity: 1
+		animation: slide-in-left linear 256ms
+	&:hover > .image-container::after
+		top: 15px
+		bottom: -15px
+		right: 15px
+		left: -15px
+		border: 5px solid black
 
 .paginator
 	position: absolute
-	right: 0px
 	top: 0px
 	font-family: overpass, sans-serif
 	font-size: 48px
 	font-weight: 600
 	@media  ( max-width: 1450px )
 		font-size: 32px
-.mirror
-	right: auto
-	left: 0
 
 img
 	max-width: 100%
@@ -45,16 +71,6 @@ img
 		max-width: 100%
 		margin-top: 65px
 
-
-:host:hover > .fromLeft
-	opacity: 1
-	animation: slide-in-right linear 256ms
-
-:host:hover > .fromRight
-	opacity: 1
-	animation: slide-in-left linear 256ms
-
-
 .image-container:after
 	content: ''
 	position: absolute
@@ -66,13 +82,6 @@ img
 	border: 5px solid transparent
 	transition: all ease-in-out 125ms
 
-:host:hover > .image-container::after
-	top: 15px
-	bottom: -15px
-	right: -15px
-	left: 15px
-	border: 5px solid black
-
 .text-container
 	flex-direction: column
 	justify-content: center
@@ -82,11 +91,6 @@ img
 	opacity: 0
 	@media  ( max-width: 1450px )
 		max-width: 600px
-
-.fromLeft
-	animation: slide-out-right linear 256ms
-.fromRight
-	animation: slide-out-left linear 256ms
 
 .tech-text
 	color: $primeColor

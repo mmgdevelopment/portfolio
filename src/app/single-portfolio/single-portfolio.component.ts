@@ -17,7 +17,11 @@ export class SinglePortfolioComponent {
 
   @HostBinding('class') get class() {
     if (this.i % 2 !== 0) {
-      return 'reverse';
-    } else return '';
+      return 'straight';
+    } else if (this.i % 2 === 0) {
+      return 'odd';
+    } else {
+      return '';
+    }
   }
 }
