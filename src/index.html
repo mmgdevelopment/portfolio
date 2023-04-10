@@ -1,13 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <script>
+    function handleUnsupportedBrowsers() {
+      let appRoot = document.getElementsByTagName("app-root")[0];
+      if (appRoot && appRoot.innerHTML === "") {
+        appRoot.innerHTML =
+          "<<h1>Unsupported Browser</h1>" +
+          "<p>Please use a modern  browser!</p>";
+      }
+    }
+  </script>
+  <body onload="handleUnsupportedBrowsers()">
+    <app-root></app-root>
+  </body>
 </html>
