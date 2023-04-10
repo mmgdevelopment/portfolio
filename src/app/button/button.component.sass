@@ -16,3 +16,21 @@ button
 	&:active
 		background-color: black
 		color: white
+	&:disabled
+		color: rgba(155,155,155,0.8)
+		border: 3px solid rgba(155,155,155,0.8)
+
+:host.secondary
+	button
+		background-color: black
+		color: white
+		border: 3px solid white
+		&:active
+			background-color: white
+			color: black
+
+:host.disabled
+	button
+		pointer-events: none
+		color: rgba(155,155,155,0.8)
+		border: 3px solid rgba(155,155,155,0.8)

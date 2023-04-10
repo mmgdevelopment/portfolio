@@ -1,15 +1,71 @@
-<form>
-  <input type="text" placeholder="Your name" />
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <div class="container">
+    <input
+      [class.alert]="name.invalid && name.dirty && name.touched"
+      [class.valid]="name.valid && name.dirty && name.touched"
+      required
+      minlength="3"
+      id="name"
+      name="names"
+      [(ngModel)]="nameValue"
+      type="text"
+      placeholder="Your name"
+      #name="ngModel"
+    />
+    <label for="name">Your name</label>
+  </div>
+  <div class="alertMessage" *ngIf="name.invalid && name.dirty && name.touched">
+    <span *ngIf="name.errors?.['required']">Your name is required</span>
+    <span *ngIf="name.errors?.['minlength']"
+      >Your name should be minimun 3 characters</span
+    >
+  </div>
 
-  <input type="mail" placeholder="Your email" />
+  <div class="container">
+    <input
+      [class.alert]="mail.invalid && mail.dirty && mail.touched"
+      [class.valid]="mail.valid && mail.dirty && mail.touched"
+      required
+      email
+      id="mail"
+      name="mail"
+      [(ngModel)]="mailValue"
+      type="mail"
+      placeholder="Your email"
+      #mail="ngModel"
+    />
+    <label for="mail">Your email</label>
+  </div>
+  <div class="alertMessage" *ngIf="mail.invalid && mail.dirty && mail.touched">
+    <span *ngIf="mail.errors?.['required']">your e mail is required</span>
+    <span *ngIf="mail.errors?.['email']">please type an correct email</span>
+  </div>
 
-  <textarea
-    placeholder="Your message"
-    name="message"
-    id=""
-    cols="30"
-    rows="5"
-  ></textarea>
+  <div class="container">
+    <textarea
+      [class.alert]="message.invalid && message.dirty && message.touched"
+      [class.valid]="message.valid && message.dirty && message.touched"
+      required
+      minlength="10"
+      id="message"
+      name="message"
+      [(ngModel)]="messageValue"
+      placeholder="Your message"
+      #message="ngModel"
+    ></textarea>
+    <label for="message">Your message</label>
+  </div>
+  <div
+    class="alertMessage"
+    *ngIf="message.invalid && message.dirty && message.touched"
+  >
+    <span *ngIf="message.errors?.['required']">Your message is empty</span>
+    <span *ngIf="message.errors?.['minlength']"
+      >Your message schuld be minimum 10 characters long</span
+    >
+  </div>
 
-  <app-button>Send message</app-button>
+  <app-button [disabled]="!contactForm.form.valid" class="secondary">
+    Send message
+  </app-button>
 </form>
