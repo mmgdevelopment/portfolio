@@ -17,6 +17,7 @@ import { SinglePortfolioComponent } from './single-portfolio/single-portfolio.co
 import { SkillIconComponent } from './skill-icon/skill-icon.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     SinglePortfolioComponent,
     ContactComponent,
     ContainerComponent,
+    MenuComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
