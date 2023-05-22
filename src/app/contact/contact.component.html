@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
   <div class="container">
     <input
       [class.alert]="name.invalid && name.dirty && name.touched"

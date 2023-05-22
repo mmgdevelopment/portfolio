@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,8 @@ export class ContactComponent {
   public mailValue = '';
   public messageValue = '';
 
-  onSubmit() {
-    console.log(this.nameValue);
+  onSubmit(contactForm: NgForm) {
+    console.log(contactForm.value);
+    contactForm.form.reset();
   }
 }
