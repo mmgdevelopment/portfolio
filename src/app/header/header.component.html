@@ -1,6 +1,15 @@
 <app-container>
   <div>
-    <img src="./../../assets/img/{ m g }.svg" alt="logo" />
-    <img src="./../../assets/img/burgerMenu.svg" alt="burger menu icon" />
+    <img
+      (click)="scrollToTop()"
+      src="./../../assets/img/{ m g }.svg"
+      alt="logo"
+    />
+
+    <img
+      (click)="burgerTouched()"
+      src="./../../assets/img/burgerMenu.svg"
+      alt="burger menu icon"
+    />
   </div>
 </app-container>
