@@ -31,6 +31,6 @@ export class MainComponent implements OnInit {
   }
 
   closeMenu(menuContainer: HTMLElement) {
-    menuContainer.style.transform = 'translateY(-950px)';
+    menuContainer.style.transform = 'translateY(-1050px)';
   }
 }

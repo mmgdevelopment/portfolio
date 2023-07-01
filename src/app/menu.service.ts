@@ -14,17 +14,13 @@ export class MenuService {
     if (!this.isOpen) {
       this.$Menu.next('open');
       this.isOpen = true;
-      setTimeout(() => {
-        document.body.style.overflow = 'hidden';
-      }, 350);
+      document.body.style.overflow = 'hidden';
       return;
     }
     if (this.isOpen) {
       this.$Menu.next('close');
       this.isOpen = false;
-      setTimeout(() => {
-        document.body.style.overflow = 'unset';
-      }, 350);
+      document.body.style.overflow = 'unset';
       return;
     }
   }
