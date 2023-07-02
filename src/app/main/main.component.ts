@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 
 @Component({
@@ -8,6 +8,9 @@ import { MenuService } from '../menu.service';
 })
 export class MainComponent implements OnInit {
   constructor(private menuservice: MenuService) {}
+  @HostBinding('class') get class() {
+    return 'smooth-scroll';
+  }
 
   ngOnInit() {
     this.menuservice.$Menu.subscribe((action) => {

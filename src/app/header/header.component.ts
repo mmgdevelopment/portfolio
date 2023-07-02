@@ -8,7 +8,6 @@ import { MenuService } from '../menu.service';
 })
 export class HeaderComponent {
   constructor(private menuservice: MenuService) {}
-  scrollToTop() {}
   burgerTouched() {
     this.menuservice.toggleMenu();
   }
