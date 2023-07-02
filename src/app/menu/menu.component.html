@@ -1,7 +1,13 @@
 <div class="menu-container">
-  <a (click)="this.menuservice.toggleMenu()" href="#about">About me</a>
-  <a (click)="this.menuservice.toggleMenu()" href="#skills">My Skills</a>
-  <a (click)="this.menuservice.toggleMenu()" href="#portfolio">Portfolio</a>
+  <a (click)="this.menuservice.toggleMenu()" routerLink="/" fragment="about"
+    >About me</a
+  >
+  <a (click)="this.menuservice.toggleMenu()" routerLink="/" fragment="skills"
+    >My Skills</a
+  >
+  <a (click)="this.menuservice.toggleMenu()" routerLink="/" fragment="portfolio"
+    >Portfolio</a
+  >
 </div>
 
 <div class="footer-container">
@@ -12,21 +18,30 @@
     </div>
 
     <div class="icon-container">
-      <img
-        loading="lazy"
-        src="./../../assets/img/github-button.svg"
-        alt="github icon"
-      />
-      <img
-        loading="lazy"
-        src="./../../assets/img/email-button.svg"
-        alt="mail icon"
-      />
-      <img
-        loading="lazy"
-        src="./../../assets/img/linkedin-button.svg"
-        alt="linkedin icon"
-      />
+      <a href="https://github.com/mmgdevelopment" target="_blank">
+        <img
+          loading="lazy"
+          src="./../../assets/img/github-button.svg"
+          alt="github icon"
+        />
+      </a>
+      <a href="mailto:info@marcel-gregor.de?subject=Contact%20from%20Website">
+        <img
+          loading="lazy"
+          src="./../../assets/img/email-button.svg"
+          alt="mail icon"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/marcel-gregor-752929249/"
+        target="_blank"
+      >
+        <img
+          loading="lazy"
+          src="./../../assets/img/linkedin-button.svg"
+          alt="linkedin icon"
+        />
+      </a>
     </div>
   </app-container>
 </div>
