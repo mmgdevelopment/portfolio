@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 
 @Component({
@@ -6,9 +6,22 @@ import { MenuService } from '../menu.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   hover = false;
-  constructor(private menuservice: MenuService) {}
+  src: string;
+  constructor(private menuservice: MenuService) {
+    this.src = '"./../../assets/img/logo_black.svg"';
+  }
+  ngOnInit(): void {
+    this.renderLogo();
+  }
+  renderLogo() {
+    if (this.hover) {
+      this.src = './../../assets/img/logo_hover.svg';
+    } else if (!this.hover) {
+      this.src = './../../assets/img/logo_black.svg';
+    }
+  }
   burgerTouched() {
     this.menuservice.toggleMenu();
   }

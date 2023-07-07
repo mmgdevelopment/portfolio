@@ -17,20 +17,12 @@
     <div class="row">
       <a routerLink="/" fragment="home">
         <img
-          *ngIf="!hover"
           loading="lazy"
           class="logo"
-          src="./../../assets/img/logo_white.svg"
+          [src]="this.src"
           alt="small logo"
-          (mouseenter)="hover = true"
-        />
-        <img
-          *ngIf="hover"
-          loading="lazy"
-          class="logo"
-          src="./../../assets/img/logo_hover.svg"
-          alt="small logo"
-          (mouseleave)="hover = false"
+          (mouseenter)="hover = true; renderLogo()"
+          (mouseleave)="hover = false; renderLogo()"
         />
       </a>
 

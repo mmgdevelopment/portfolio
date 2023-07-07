@@ -2,16 +2,10 @@
   <div>
     <a routerLink="/" fragment="home">
       <img
-        *ngIf="!hover"
-        src="./../../assets/img/logo_black.svg"
+        [src]="this.src"
         alt="logo"
-        (mouseover)="hover = true"
-      />
-      <img
-        *ngIf="hover"
-        src="./../../assets/img/logo_hover.svg"
-        alt="logo"
-        (mouseleave)="hover = false"
+        (mouseenter)="hover = true; renderLogo()"
+        (mouseleave)="hover = false; renderLogo()"
       />
     </a>
 
