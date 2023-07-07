@@ -7,6 +7,7 @@ import { MenuService } from '../menu.service';
   styleUrls: ['./header.component.sass'],
 })
 export class HeaderComponent {
+  hover = false;
   constructor(private menuservice: MenuService) {}
   burgerTouched() {
     this.menuservice.toggleMenu();

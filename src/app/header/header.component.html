@@ -1,7 +1,18 @@
 <app-container>
   <div>
     <a routerLink="/" fragment="home">
-      <img src="./../../assets/img/{ m g }.svg" alt="logo" />
+      <img
+        *ngIf="!hover"
+        src="./../../assets/img/logo_black.svg"
+        alt="logo"
+        (mouseover)="hover = true"
+      />
+      <img
+        *ngIf="hover"
+        src="./../../assets/img/logo_hover.svg"
+        alt="logo"
+        (mouseleave)="hover = false"
+      />
     </a>
 
     <img
