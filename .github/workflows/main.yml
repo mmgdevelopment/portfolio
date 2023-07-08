@@ -39,6 +39,6 @@ jobs:
             /dist/portfolio/
             # The remote path to sync
           remotepath:
-            /var/www/ftpserver
+            /var/www/marcelgregor
             # The private key
           deploy_key: ${{ secrets.DEPLOY_KEY_ }}
