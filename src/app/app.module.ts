@@ -37,7 +37,7 @@ import { MenuComponent } from './menu/menu.component';
     ContainerComponent,
     MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
