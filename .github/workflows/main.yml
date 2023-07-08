@@ -10,15 +10,13 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  build_and_deploy:
     runs-on: ubuntu-latest
-
+    
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -31,6 +29,7 @@ jobs:
     
     - uses: contention/rsync-deployments@v2.0.0
     - name: rsync deployments
+      uses: actions/upload-artifact@v3
       with:
           # Initial/required rsync flags
         flags: -a
