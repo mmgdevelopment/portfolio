@@ -45,5 +45,5 @@ jobs:
           # The remote path to sync
         remotepath: /var/www/ftpserver
           # The private key
-        deploy_key: ${{DEPLOY_KEY_}}
+        deploy_key: ${{ secrets.DEPLOY_KEY_ }}
 
