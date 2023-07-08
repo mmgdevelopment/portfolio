@@ -27,9 +27,9 @@ jobs:
     - run: npm ci
     - run: npm run build 
     
-    - uses: contention/rsync-deployments@v2.0.0
+    - uses: actions/upload-artifact@v3
     - name: rsync deployments
-      uses: actions/upload-artifact@v3
+      uses: contention/rsync-deployments@v2.0.0
       with:
           # Initial/required rsync flags
         flags: -a
@@ -44,5 +44,5 @@ jobs:
           # The remote path to sync
         remotepath: /var/www/ftpserver
           # The private key
-        deploy_key: §DEPLOYKEY
+        deploy_key: $DEPLOY_KEY_
 
