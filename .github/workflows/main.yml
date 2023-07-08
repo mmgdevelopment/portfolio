@@ -41,7 +41,7 @@ jobs:
           # The deployment target
         host: marcel-gregor.de
           # The local path to sync
-        localpath: /dist/
+        localpath: /dist/portfolio/
           # The remote path to sync
         remotepath: /var/www/ftpserver
           # The private key
